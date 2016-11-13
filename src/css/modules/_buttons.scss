@@ -1,0 +1,193 @@
+/* ==|====================
+   Module/Buttons
+   ======================= */
+.btn{
+	width: 163px;
+	height: 36px;
+	line-height: 34px;
+	background-color: transparent;
+	border: 1px solid #fff;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	display: inline-block;
+	border-radius: 5px;
+	text-decoration: none;
+	letter-spacing: normal;
+}
+.btn:hover,
+.btn:focus{
+	text-decoration: none;
+	color: #fff;
+	opacity: .5;
+}
+.btn-all{
+	display: block;
+	background-color: #e21683;
+	width: 165px;
+	height: 31px;
+	line-height: 29px;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 5px;
+	text-align: center;
+	text-decoration: none;
+	margin: 0 auto;
+	border: none;
+	border-bottom: 2px solid #a9246b;
+	letter-spacing: normal;
+}
+.btn-all:hover,
+.btn-all:focus{
+	opacity: .5;
+	color: #fff;
+	text-decoration: none;
+}
+
+.btn-purp-border{
+	line-height: 36px;
+	color: $color1;
+	background-color: transparent;
+	border: 2px solid $color1;
+}
+.btn-purp-border:hover,
+.btn-purp-border:focus{
+	background-color: $color1;
+	color: #fff;
+	border: 2px solid $color1;
+}
+
+
+.btn-menu{
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto
+}
+.btn-menu i{
+    display: block;
+  	position: absolute;
+  	width: 100%;
+  	height: 5px;
+    background-color: #fff;
+    border: none;
+  	border-radius: 4px;
+}
+.btn-menu i::before,
+.btn-menu i::after{
+	content: '';
+    display: block;
+  	position: absolute;
+  	width: 100%;
+  	height: 5px;
+    background-color: #fff;
+    border: none;
+  	border-radius: 4px;
+}
+.btn-menu i{
+  top: 0px;
+  transition: transform 0.5s, top 0.2s;
+/* transition-delay: 0.2s, 0s; */
+}
+.btn-menu i::before{
+top: 12px;
+  transition: transform 0.5s, top 0.2s;
+  transition-delay: 0.2s, 0s;
+}
+.btn-menu i::after{
+	top: 24px;
+  transition: all 0.5s;
+  transition-delay: 0.1s;
+}
+
+.btn-menu.active i{
+  background-color: transparent;
+  top: 28px;
+  transform: rotate(180deg);
+}
+.btn-menu.active i::before{
+  top: 15px;
+  transform: rotate(-140deg);
+}
+.btn-menu.active i::after{
+  top: 15px;
+  transform: rotate(140deg);
+}
+
+/*---border-effects---*/
+.g-border-twain::before,
+.g-border-twain::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 0;
+  background-color: #fff;
+  transition: all 0.8s linear;
+}
+.g-border-twain::after{
+  left: auto;
+  right: 0;
+}
+.active .g-border-twain::before,
+.active .g-border-twain::after{
+  width: 50%;
+}
+
+/*---slide-effects---*/
+.js-slide-effect-left > li,
+.js-slide-effect-left > p,
+.js-slide-effect-left > span,
+.js-slide-effect-left > div{
+  left: -200px;
+}
+.js-slide-effect-right > li,
+.js-slide-effect-right > p,
+.js-slide-effect-right > span,
+.js-slide-effect-right > div{
+  right: -200px;
+}
+
+/*---preloader-effects---*/
+.g-loader{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+.g-loader span{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: $color2;
+}
+.g-loader .g-loader__right{
+  left: auto;
+  right: 0;
+}
+
+.g-loader-inner{
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url('../images/spinner.svg') no-repeat 50% 50%;
+  margin: auto;
+  z-index: 2;
+}

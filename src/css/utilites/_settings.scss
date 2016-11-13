@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+// ----------------------
+// == Site settings
+// ----------------------
+
+// Fonts
+$font1: 'Roboto', sans-serif;
+$font2: 'Comfortaa', cursive;
+
+// = Colors
+// -----------------------------
+
+// Graphic chart
+$blue: #406C8E;
+$black: #111519;
+$gray: #E1E0DB;
+$red: #E1E0DB;
+
+$color1: $blue;
+$color2: $black;
+$color3: $gray;
+
+
+// = Grid
+// -----------------------------
+
+// Max width wrapper
+$wrapper-width: pxtoem(1140, 16);
+
+// = Inline grid
+// -----------------------------
+%parent{
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -7px;
+}
+%child{
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: normal;
+  display: inline-block;
+}
+%align-middle{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+}
